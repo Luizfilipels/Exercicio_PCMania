@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class SistemaOperacional {
+public class SistemaOperacional {
+    String nome;
+    int tipo;
 }

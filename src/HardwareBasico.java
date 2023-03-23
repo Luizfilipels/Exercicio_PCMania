@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class HardwareBasico {
+public class HardwareBasico {
+    String nome;
+    float capacidade;
 }

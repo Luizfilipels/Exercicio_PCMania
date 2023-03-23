@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class MemoriaUSB {
+public class MemoriaUSB {
+    String nome;
+    int capacidade;
 }
