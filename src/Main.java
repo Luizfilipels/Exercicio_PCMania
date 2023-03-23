@@ -156,13 +156,25 @@ public class Main {
 
                     if (ver == 1) {
                         for(f = 0; f < c.length; f++) {
+                            if (c[f] != null) {
+                                for (i = 0; i < c[f].carrinho.length; i++) {
+                                    if (c[f].carrinho[i] == 0) {
+                                        c[f].carrinho[i] = k;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                            /*
                             for(i = 0; i < c[f].carrinho.length;i++) {
                                 if(c[f].carrinho[i] == 0) {
                                     c[f].carrinho[i] = k;
                                     break;
                                 }
                             }
-                        }
+
+
+                             */
                         /*
                         for(i = 0;i < carrinho.length;i++) {
                             if(carrinho[i] == 0) {
@@ -182,7 +194,7 @@ public class Main {
                     System.out.println("Você escolheu o PC - 2");
                     System.out.println("Marca: " + pc[1].marca);
                     System.out.println("Preço: " + pc[1].preco);
-                    System.out.println("Lista de componentes do PC - 1:");
+                    System.out.println("Lista de componentes do PC - 2:");
                     for (i = 0; i < pc[1].hw.length; i++) {
                         if(pc[1].hw[i] != null) {
                             System.out.println(pc[1].hw[i].nome + " - Capacidade: " + pc[1].hw[i].capacidade);
@@ -195,10 +207,12 @@ public class Main {
 
                     if (ver == 1) {
                         for(f = 0; f < c.length; f++) {
-                            for(i = 0; i < c[f].carrinho.length;i++) {
-                                if(c[f].carrinho[i] == 0) {
-                                    c[f].carrinho[i] = k;
-                                    break;
+                            if (c[f] != null) {
+                                for (i = 0; i < c[f].carrinho.length; i++) {
+                                    if (c[f].carrinho[i] == 0) {
+                                        c[f].carrinho[i] = k;
+                                        break;
+                                    }
                                 }
                             }
                         }
@@ -217,15 +231,58 @@ public class Main {
                         System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
                     }
                     break;
+                case 3:
+                    System.out.println("Você escolheu o PC - 3");
+                    System.out.println("Marca: " + pc[0].marca);
+                    System.out.println("Preço: " + pc[0].preco);
+                    System.out.println("Lista de componentes do PC - 3:");
+                    for (i = 0; i < pc[0].hw.length; i++) {
+                        if(pc[0].hw[i] != null) {
+                            System.out.println(pc[0].hw[i].nome + " - Capacidade: " + pc[0].hw[i].capacidade);
+                        }
+                    }
+
+                    System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
+                    System.out.print("--> ");
+                    ver = entrada.nextInt();
+
+                    if (ver == 1) {
+                        for(f = 0; f < c.length; f++) {
+                            if (c[f] != null) {
+                                for (i = 0; i < c[f].carrinho.length; i++) {
+                                    if (c[f].carrinho[i] == 0) {
+                                        c[f].carrinho[i] = k;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        System.out.println("Item adicionado com sucesso no carrinho!");
+                        System.out.println("------------------------------------");
+                    } else if(ver == 2) {
+                        System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
+                    }
+                    break;
 
             }
             System.out.print("Agora, seu carrinho tem ");
             for(f = 0; f < c.length;f++) {
+                if(c[f] != null) {
+                    for(i = 0; i < c[f].carrinho.length; i++) {
+                        if(c[f].carrinho[i] != 0) {
+                            qnt++;
+                            break;
+                        }
+                    }
+                }
+                /*
                 for(i = 0; i < c[f].carrinho.length; i++) {
                     if(c[f].carrinho[i] != 0) {
                         qnt++;
                     }
                 }
+
+                 */
             }
             /*
             for(i = 0; i < carrinho.length;i++) {
@@ -248,6 +305,8 @@ public class Main {
             System.out.print("--> ");
             k = entrada.nextInt();
 
+
+            //Checkout
             if(k == 0) {
                 c[0].calculaTotalCompra();
             }
