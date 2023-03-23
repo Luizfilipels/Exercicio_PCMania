@@ -308,7 +308,8 @@ public class Main {
 
             //Checkout
             if(k == 0) {
-                c[0].calculaTotalCompra();
+                System.out.println("------------------------------------");
+                System.out.println("Total da compra: R$" + c[0].calculaTotalCompra());
             }
 
 

@@ -1,26 +1,17 @@
 public class Cliente {
     String nome;
     long cpf;
-    int i;
-    int j;
+    float total = 0;
 
-    int[] carrinho = new int[10];
+    float[] carrinho = new float[10];
 
     float calculaTotalCompra() {
-
-        /*
-        for(i = 0; i < carrinho.length; i++) {
+        for(int i=0; i < carrinho.length;i++) {
             if(carrinho[i] != 0) {
-                System.out.println(carrinho[i]);
+                total = total + carrinho[i];
             }
         }
-
-         */
-
-
-
-
-
-        return 0;
+        //System.out.print("Total da compra: R$" + total);
+        return total;
     }
 }
