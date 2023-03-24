@@ -20,6 +20,7 @@ public class Computador {
         for(int i = 0;i < memUSB.length;i++) {
             if(memUSB[i] == null) {
                 memUSB[i] = musb;
+                break;
             }
         }
     }
