@@ -6,7 +6,9 @@ public class Computador {
     SistemaOperacional os;
     HardwareBasico[] hw;
 
-    MemoriaUSB memUSB;
+    MemoriaUSB[] memUSB = new MemoriaUSB[3];
+
+
 
     //Construtor
     public Computador() {
@@ -15,7 +17,25 @@ public class Computador {
     }
 
     void addMemoriaUSB(MemoriaUSB musb) {
+        for(int i = 0;i < memUSB.length;i++) {
+            if(memUSB[i] == null) {
+                memUSB[i] = musb;
+            }
+        }
+    }
 
+    void mostraPCConfigs() {
+        for (HardwareBasico hardwareBasico : hw) {
+            if (hardwareBasico != null) {
+                System.out.println(hardwareBasico.nome + " - Capacidade: " + hardwareBasico.capacidade);
+            } else {
+                break;
+            }
+        }
+        for(int i = 0; i < memUSB.length;i++) {
+            System.out.println("Acompanha: " + memUSB[i].nome + " - Capacidade: " + memUSB[i].capacidade);
+            break;
+        }
     }
 
 }

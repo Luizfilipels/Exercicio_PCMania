@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Computador[] pc = new Computador[3];
         MemoriaUSB usb_pc1 = new MemoriaUSB();
+        MemoriaUSB usb_pc2 = new MemoriaUSB();
+        MemoriaUSB usb_pc3 = new MemoriaUSB();
         Cliente[] c = new Cliente[5];
         int i;
         int j = 0;
@@ -15,6 +17,11 @@ public class Main {
 
         usb_pc1.nome = "Pen-drive";
         usb_pc1.capacidade = 16;
+        usb_pc2.nome = "Pen-drive";
+        usb_pc2.capacidade = 32;
+        usb_pc3.nome = "HD Externo";
+        usb_pc3.capacidade = 1000;
+
 
         //Criando PCs
         pc[0] = new Computador();
@@ -50,8 +57,6 @@ public class Main {
         pc[0].os.nome = "Ubuntu 22.04.2 LTS";
         pc[0].os.tipo = 32;
         pc[0].addMemoriaUSB(usb_pc1);
-        pc[0].memUSB.nome = "Pen-drive";
-        pc[0].memUSB.capacidade = 16;
         //-----------------------------------------//
         //PC 02
         pc[1].marca = "Acer";
@@ -64,8 +69,7 @@ public class Main {
         pc[1].hw[2].capacidade = 1000f;
         pc[1].os.nome = "Windows 8";
         pc[1].os.tipo = 64;
-        pc[1].memUSB.nome = "Pen-drive";
-        pc[1].memUSB.capacidade = 32;
+        pc[1].addMemoriaUSB(usb_pc2);
         //-----------------------------------------//
         //PC 03
         pc[2].marca = "Vaio";
@@ -78,8 +82,8 @@ public class Main {
         pc[2].hw[2].capacidade = 2000f;
         pc[2].os.nome = "Windows 10";
         pc[2].os.tipo = 64;
-        pc[2].memUSB.nome = "HD Externo";
-        pc[2].memUSB.capacidade = 1000;
+        pc[2].addMemoriaUSB(usb_pc3);
+        //-----------------------------------------//
 
 
         System.out.println("--- PC Mania ---");
@@ -90,13 +94,7 @@ public class Main {
             System.out.println("PC - " + (i + 1) + ": " + pc[i].marca);
             System.out.println("Preço: R$" + pc[i].preco);
             System.out.println("Componentes:");
-            for (j = 0; j < pc[i].hw.length; j++) {
-                if (pc[i].hw[j] != null) {
-                    System.out.println(pc[i].hw[j].nome + " - Capacidade: " + pc[i].hw[j].capacidade);
-                } else {
-                    break;
-                }
-            }
+            pc[0].mostraPCConfigs();
 
             System.out.println("------------------------------------");
         }
@@ -136,11 +134,7 @@ public class Main {
                     System.out.println("Marca: " + pc[0].marca);
                     System.out.println("Preço: " + pc[0].preco);
                     System.out.println("Lista de componentes do PC - 1:");
-                    for (i = 0; i < pc[0].hw.length; i++) {
-                        if (pc[0].hw[i] != null) {
-                            System.out.println(pc[0].hw[i].nome + " - Capacidade: " + pc[0].hw[i].capacidade);
-                        }
-                    }
+                    pc[0].mostraPCConfigs();
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
                     ver = entrada.nextInt();
@@ -166,11 +160,7 @@ public class Main {
                     System.out.println("Marca: " + pc[1].marca);
                     System.out.println("Preço: " + pc[1].preco);
                     System.out.println("Lista de componentes do PC - 2:");
-                    for (i = 0; i < pc[1].hw.length; i++) {
-                        if (pc[1].hw[i] != null) {
-                            System.out.println(pc[1].hw[i].nome + " - Capacidade: " + pc[1].hw[i].capacidade);
-                        }
-                    }
+                    pc[1].mostraPCConfigs();
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
                     ver = entrada.nextInt();
@@ -195,11 +185,7 @@ public class Main {
                     System.out.println("Marca: " + pc[2].marca);
                     System.out.println("Preço: " + pc[2].preco);
                     System.out.println("Lista de componentes do PC - 3:");
-                    for (i = 0; i < pc[0].hw.length; i++) {
-                        if (pc[0].hw[i] != null) {
-                            System.out.println(pc[2].hw[i].nome + " - Capacidade: " + pc[2].hw[i].capacidade);
-                        }
-                    }
+                    pc[2].mostraPCConfigs();
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
                     ver = entrada.nextInt();
