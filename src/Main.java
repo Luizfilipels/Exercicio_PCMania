@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Computador[] pc = new Computador[3];
-        MemoriaUSB usb = new MemoriaUSB();
+        MemoriaUSB usb_pc1 = new MemoriaUSB();
         Cliente[] c = new Cliente[5];
         int i;
         int j = 0;
@@ -13,22 +13,22 @@ public class Main {
         int ver;
         Scanner entrada = new Scanner(System.in);
 
+        usb_pc1.nome = "Pen-drive";
+        usb_pc1.capacidade = 16;
+
         //Criando PCs
         pc[0] = new Computador();
         pc[0].hw[0] = new HardwareBasico();
         pc[0].hw[1] = new HardwareBasico();
         pc[0].hw[2] = new HardwareBasico();
-        pc[0].memUSB = usb;
         pc[1] = new Computador();
         pc[1].hw[0] = new HardwareBasico();
         pc[1].hw[1] = new HardwareBasico();
         pc[1].hw[2] = new HardwareBasico();
-        pc[1].memUSB = usb;
         pc[2] = new Computador();
         pc[2].hw[0] = new HardwareBasico();
         pc[2].hw[1] = new HardwareBasico();
         pc[2].hw[2] = new HardwareBasico();
-        pc[2].memUSB = usb;
 
         //Criando cliente
         c[0] = new Cliente();
@@ -49,6 +49,7 @@ public class Main {
         pc[0].hw[2].capacidade = 500f;
         pc[0].os.nome = "Ubuntu 22.04.2 LTS";
         pc[0].os.tipo = 32;
+        pc[0].addMemoriaUSB(usb_pc1);
         pc[0].memUSB.nome = "Pen-drive";
         pc[0].memUSB.capacidade = 16;
         //-----------------------------------------//
