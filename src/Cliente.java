@@ -11,7 +11,6 @@ public class Cliente {
                 total = total + carrinho[i];
             }
         }
-        //System.out.print("Total da compra: R$" + total);
         return total;
     }
 }

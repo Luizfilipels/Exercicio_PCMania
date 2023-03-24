@@ -111,16 +111,6 @@ public class Main {
                 }
             }
         }
-        /*
-        for (i = 0; i < carrinho.length; i++) {
-            if(carrinho[i] == 0) {
-                j = 0;
-            } else {
-                j = 1;
-            }
-        }
-
-         */
         if(j == 0) {
             System.out.println("Seu carrinho tem 0 produto(s)");
         }
@@ -164,25 +154,6 @@ public class Main {
                                 }
                             }
                         }
-                            /*
-                            for(i = 0; i < c[f].carrinho.length;i++) {
-                                if(c[f].carrinho[i] == 0) {
-                                    c[f].carrinho[i] = k;
-                                    break;
-                                }
-                            }
-
-
-                             */
-                        /*
-                        for(i = 0;i < carrinho.length;i++) {
-                            if(carrinho[i] == 0) {
-                                carrinho[i] = k;
-                                break;
-                            }
-                        }
-
-                         */
                         System.out.println("Item adicionado com sucesso no carrinho!");
                         System.out.println("------------------------------------");
                     } else if (ver == 2) {
@@ -213,16 +184,6 @@ public class Main {
                                 }
                             }
                         }
-                        /*
-                    if (ver == 1) {
-                        for(i = 0;i < carrinho.length;i++) {
-                            if(carrinho[i] == 0) {
-                                carrinho[i] = k;
-                                break;
-                            }
-                        }
-
-                         */
                         System.out.println("Item adicionado com sucesso no carrinho!");
                     } else if (ver == 2) {
                         System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
@@ -261,31 +222,15 @@ public class Main {
             }
             System.out.print("Agora, seu carrinho tem ");
             for(f = 0; f < c.length;f++) {
-                if(c[f] != null) {
-                    for(i = 0; i < c[f].carrinho.length; i++) {
-                        if(c[f].carrinho[i] != 0) {
+                if (c[f] != null) {
+                    for (i = 0; i < c[f].carrinho.length; i++) {
+                        if (c[f].carrinho[i] != 0) {
                             qnt++;
                             break;
                         }
                     }
                 }
-                /*
-                for(i = 0; i < c[f].carrinho.length; i++) {
-                    if(c[f].carrinho[i] != 0) {
-                        qnt++;
-                    }
-                }
-
-                 */
             }
-            /*
-            for(i = 0; i < carrinho.length;i++) {
-                if(carrinho[i] != 0) {
-                    qnt++;
-                }
-            }
-             */
-
             if(qnt > 1) {
                 System.out.println(qnt + " itens");
             } else {
