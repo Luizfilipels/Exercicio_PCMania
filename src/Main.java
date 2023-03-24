@@ -10,6 +10,7 @@ public class Main {
         int k;
         int f;
         int qnt = 0;
+        int ver;
         Scanner entrada = new Scanner(System.in);
 
         //Criando PCs
@@ -139,27 +140,25 @@ public class Main {
             System.out.println("------------------------------------");
 
             switch (k) {
-                case 1:
+                case 1 -> {
                     System.out.println("Você escolheu o PC - 1");
                     System.out.println("Marca: " + pc[0].marca);
                     System.out.println("Preço: " + pc[0].preco);
                     System.out.println("Lista de componentes do PC - 1:");
                     for (i = 0; i < pc[0].hw.length; i++) {
-                        if(pc[0].hw[i] != null) {
+                        if (pc[0].hw[i] != null) {
                             System.out.println(pc[0].hw[i].nome + " - Capacidade: " + pc[0].hw[i].capacidade);
                         }
                     }
-
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
-                    int ver = entrada.nextInt();
-
+                    ver = entrada.nextInt();
                     if (ver == 1) {
-                        for(f = 0; f < c.length; f++) {
+                        for (f = 0; f < c.length; f++) {
                             if (c[f] != null) {
                                 for (i = 0; i < c[f].carrinho.length; i++) {
                                     if (c[f].carrinho[i] == 0) {
-                                        c[f].carrinho[i] = k;
+                                        c[f].carrinho[i] = pc[0].preco;
                                         break;
                                     }
                                 }
@@ -186,31 +185,29 @@ public class Main {
                          */
                         System.out.println("Item adicionado com sucesso no carrinho!");
                         System.out.println("------------------------------------");
-                    } else if(ver == 2) {
+                    } else if (ver == 2) {
                         System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
                     }
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("Você escolheu o PC - 2");
                     System.out.println("Marca: " + pc[1].marca);
                     System.out.println("Preço: " + pc[1].preco);
                     System.out.println("Lista de componentes do PC - 2:");
                     for (i = 0; i < pc[1].hw.length; i++) {
-                        if(pc[1].hw[i] != null) {
+                        if (pc[1].hw[i] != null) {
                             System.out.println(pc[1].hw[i].nome + " - Capacidade: " + pc[1].hw[i].capacidade);
                         }
                     }
-
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
                     ver = entrada.nextInt();
-
                     if (ver == 1) {
-                        for(f = 0; f < c.length; f++) {
+                        for (f = 0; f < c.length; f++) {
                             if (c[f] != null) {
                                 for (i = 0; i < c[f].carrinho.length; i++) {
                                     if (c[f].carrinho[i] == 0) {
-                                        c[f].carrinho[i] = k;
+                                        c[f].carrinho[i] = pc[1].preco;
                                         break;
                                     }
                                 }
@@ -227,31 +224,29 @@ public class Main {
 
                          */
                         System.out.println("Item adicionado com sucesso no carrinho!");
-                    } else if(ver == 2) {
+                    } else if (ver == 2) {
                         System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
                     }
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println("Você escolheu o PC - 3");
-                    System.out.println("Marca: " + pc[0].marca);
-                    System.out.println("Preço: " + pc[0].preco);
+                    System.out.println("Marca: " + pc[2].marca);
+                    System.out.println("Preço: " + pc[2].preco);
                     System.out.println("Lista de componentes do PC - 3:");
                     for (i = 0; i < pc[0].hw.length; i++) {
-                        if(pc[0].hw[i] != null) {
-                            System.out.println(pc[0].hw[i].nome + " - Capacidade: " + pc[0].hw[i].capacidade);
+                        if (pc[0].hw[i] != null) {
+                            System.out.println(pc[2].hw[i].nome + " - Capacidade: " + pc[2].hw[i].capacidade);
                         }
                     }
-
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
                     ver = entrada.nextInt();
-
                     if (ver == 1) {
-                        for(f = 0; f < c.length; f++) {
+                        for (f = 0; f < c.length; f++) {
                             if (c[f] != null) {
                                 for (i = 0; i < c[f].carrinho.length; i++) {
                                     if (c[f].carrinho[i] == 0) {
-                                        c[f].carrinho[i] = k;
+                                        c[f].carrinho[i] = pc[2].preco;
                                         break;
                                     }
                                 }
@@ -259,11 +254,10 @@ public class Main {
                         }
                         System.out.println("Item adicionado com sucesso no carrinho!");
                         System.out.println("------------------------------------");
-                    } else if(ver == 2) {
+                    } else if (ver == 2) {
                         System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
                     }
-                    break;
-
+                }
             }
             System.out.print("Agora, seu carrinho tem ");
             for(f = 0; f < c.length;f++) {
@@ -309,6 +303,7 @@ public class Main {
             //Checkout
             if(k == 0) {
                 System.out.println("------------------------------------");
+                System.out.println("Cliente: " + c[0].nome);
                 System.out.println("Total da compra: R$" + c[0].calculaTotalCompra());
             }
 
