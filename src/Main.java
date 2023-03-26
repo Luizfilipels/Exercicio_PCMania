@@ -42,7 +42,7 @@ public class Main {
 
         //Definindo cliente
         c[0].nome = "Luiz Filipe";
-        c[0].cpf = 1234;
+        c[0].cpf = 12345678900L;
 
         //Cadastrando produto
         //PC 01
@@ -111,7 +111,7 @@ public class Main {
             }
         }
         if(j == 0) {
-            System.out.println("Seu carrinho tem 0 produto(s)");
+            System.out.println("Seu carrinho está vazio.");
         }
         
 
@@ -207,7 +207,7 @@ public class Main {
                     }
                 }
             }
-            System.out.print("Agora, seu carrinho tem ");
+            //System.out.print("Agora, seu carrinho tem ");
             for(f = 0; f < c.length;f++) {
                 if (c[f] != null) {
                     for (i = 0; i < c[f].carrinho.length; i++) {
@@ -219,9 +219,9 @@ public class Main {
                 }
             }
             if(qnt > 1) {
-                System.out.println(qnt + " itens");
-            } else {
-                System.out.println(qnt + " item");
+                System.out.println("Agora, seu carrinho tem " + qnt + " itens");
+            } else if (qnt == 0) {
+                System.out.println("Seu carrinho está vazio");
             }
 
             System.out.println("------------------------------------");

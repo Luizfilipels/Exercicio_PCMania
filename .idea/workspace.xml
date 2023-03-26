@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aacd4ef8-313d-405f-bdd7-9f36f50ffcc2" name="Changes" comment="Terminar o for de Computador.java e testar">
+    <list default="true" id="aacd4ef8-313d-405f-bdd7-9f36f50ffcc2" name="Changes" comment="não sei o que mudou">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Computador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Computador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679694367640</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Nunca mais esqueça de colocar a variável em uma repetição pelo amor de deus | primeira vez que eu escrevo um for each sabendo o que eu to fazendo">
+      <created>1679843494724</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679843494724</updated>
+    </task>
+    <task id="LOCAL-00006" summary="não sei o que mudou">
+      <created>1679843518761</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679843518761</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -90,7 +103,9 @@
     <MESSAGE value="b" />
     <MESSAGE value="falta algo" />
     <MESSAGE value="Terminar o for de Computador.java e testar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminar o for de Computador.java e testar" />
+    <MESSAGE value="Nunca mais esqueça de colocar a variável em uma repetição pelo amor de deus | primeira vez que eu escrevo um for each sabendo o que eu to fazendo" />
+    <MESSAGE value="não sei o que mudou" />
+    <option name="LAST_COMMIT_MESSAGE" value="não sei o que mudou" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -99,21 +114,6 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Computador.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Computador.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Computador.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
