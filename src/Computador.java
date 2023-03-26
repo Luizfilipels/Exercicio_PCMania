@@ -2,11 +2,10 @@ public class Computador {
 
     String marca;
     float preco;
-
     SistemaOperacional os;
     HardwareBasico[] hw;
 
-    MemoriaUSB[] memUSB = new MemoriaUSB[3];
+    MemoriaUSB[] memUSB = new MemoriaUSB[1];
 
 
 
@@ -32,10 +31,10 @@ public class Computador {
             } else {
                 break;
             }
+
         }
-        for(int i = 0; i < memUSB.length;i++) {
-            System.out.println("Acompanha: " + memUSB[i].nome + " - Capacidade: " + memUSB[i].capacidade);
-            break;
+        for (MemoriaUSB memoriaUSB : memUSB) {
+            System.out.println("Acompanha: " + memoriaUSB.nome + " - Capacidade: " + memoriaUSB.capacidade);
         }
     }
 

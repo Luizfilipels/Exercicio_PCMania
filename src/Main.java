@@ -94,7 +94,7 @@ public class Main {
             System.out.println("PC - " + (i + 1) + ": " + pc[i].marca);
             System.out.println("Preço: R$" + pc[i].preco);
             System.out.println("Componentes:");
-            pc[0].mostraPCConfigs();
+            pc[i].mostraPCConfigs();
 
             System.out.println("------------------------------------");
         }
