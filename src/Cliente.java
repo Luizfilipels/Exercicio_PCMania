@@ -6,9 +6,9 @@ public class Cliente {
     float[] carrinho = new float[10];
 
     float calculaTotalCompra() {
-        for(int i=0; i < carrinho.length;i++) {
-            if(carrinho[i] != 0) {
-                total = total + carrinho[i];
+        for (float v : carrinho) {
+            if (v != 0) {
+                total = total + v;
             }
         }
         return total;
