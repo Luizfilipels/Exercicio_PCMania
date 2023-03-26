@@ -118,7 +118,7 @@ public class Main {
         System.out.println("Qual PC você vai querer comprar? ( De 1 até 3");
         System.out.print("--> ");
         k = entrada.nextInt();
-        while (k > 3 || k < 0) {
+        while (k > 3 || k < 1) {
             System.out.println("Entrada inválida, escolha entre 1 , 2 e 3");
             System.out.print("--> ");
             k = entrada.nextInt();
@@ -138,6 +138,13 @@ public class Main {
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
                     ver = entrada.nextInt();
+
+                    while(ver > 2 || ver < 1) {
+                        System.out.println("Entrada inválida, escolha entre 1 e 2");
+                        System.out.print("--> ");
+                        ver = entrada.nextInt();
+                    }
+
                     if (ver == 1) {
                         for (f = 0; f < c.length; f++) {
                             if (c[f] != null) {
@@ -151,7 +158,7 @@ public class Main {
                         }
                         System.out.println("Item adicionado com sucesso no carrinho!");
                         System.out.println("------------------------------------");
-                    } else if (ver == 2) {
+                    } else {
                         System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
                     }
                 }
@@ -164,6 +171,13 @@ public class Main {
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
                     ver = entrada.nextInt();
+
+                    while(ver > 2 || ver < 1) {
+                        System.out.println("Entrada inválida, escolha entre 1 e 2");
+                        System.out.print("--> ");
+                        ver = entrada.nextInt();
+                    }
+
                     if (ver == 1) {
                         for (f = 0; f < c.length; f++) {
                             if (c[f] != null) {
@@ -176,7 +190,7 @@ public class Main {
                             }
                         }
                         System.out.println("Item adicionado com sucesso no carrinho!");
-                    } else if (ver == 2) {
+                    } else {
                         System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
                     }
                 }
@@ -189,6 +203,13 @@ public class Main {
                     System.out.println("Tem certeza que quer adicionar esse PC no seu carrinho? (1 para Sim e 2 para Não");
                     System.out.print("--> ");
                     ver = entrada.nextInt();
+
+                    while(ver > 2 || ver < 1) {
+                        System.out.println("Entrada inválida, escolha entre 1 e 2");
+                        System.out.print("--> ");
+                        ver = entrada.nextInt();
+                    }
+
                     if (ver == 1) {
                         for (f = 0; f < c.length; f++) {
                             if (c[f] != null) {
@@ -202,7 +223,7 @@ public class Main {
                         }
                         System.out.println("Item adicionado com sucesso no carrinho!");
                         System.out.println("------------------------------------");
-                    } else if (ver == 2) {
+                    } else {
                         System.out.println("Item não foi adicionado ao carrinho a pedido do usuário.");
                     }
                 }
@@ -231,6 +252,12 @@ public class Main {
             System.out.print("--> ");
             k = entrada.nextInt();
 
+            while(k > 3 || k < 0) {
+                System.out.println("Entrada inválida, escolha entre os itens 1, 2 e 3");
+                System.out.println("Para ir ao checkout, digite 0");
+                System.out.print("--> ");
+                k = entrada.nextInt();
+            }
 
             //Checkout
             if(k == 0) {

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aacd4ef8-313d-405f-bdd7-9f36f50ffcc2" name="Changes" comment="não sei o que mudou">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="aacd4ef8-313d-405f-bdd7-9f36f50ffcc2" name="Changes" comment="Mudando alguns textos">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679843518761</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Mudando alguns textos">
+      <created>1679843998552</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679843998552</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -105,7 +111,8 @@
     <MESSAGE value="Terminar o for de Computador.java e testar" />
     <MESSAGE value="Nunca mais esqueça de colocar a variável em uma repetição pelo amor de deus | primeira vez que eu escrevo um for each sabendo o que eu to fazendo" />
     <MESSAGE value="não sei o que mudou" />
-    <option name="LAST_COMMIT_MESSAGE" value="não sei o que mudou" />
+    <MESSAGE value="Mudando alguns textos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudando alguns textos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
